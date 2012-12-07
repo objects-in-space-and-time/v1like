@@ -8,7 +8,12 @@ Key sub-operations performed in a simple V1-like model
 
 """
 
-import Image
+# importing PIL modules is never as straightforward as it ought to be.
+try:
+    import Image
+except ImportError:
+    from PIL import Image
+
 import scipy as N
 import scipy.signal
 
